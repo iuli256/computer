@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container">
+        {{ form_start(form) }}
+        <div class="row">
+            <div class="col">
+                {{ form_label(form.firstElement) }}
+                {{ form_widget(form.firstElement) }}
+
+            </div>
+            <div class="col">
+                {{ form_label(form.operator) }}<br>
+                {{ form_widget(form.operator) }}
+            </div>
+            <div class="col">
+                {{ form_label(form.secondElement) }}
+                {{ form_widget(form.secondElement) }}
+            </div>
+            <div class="col">
+                <div style="margin: 20px auto;">
+                    {{ form(form) }}
+                </div>
+            </div>
+        </div>
+        <div class="my-custom-class-for-errors">
+            {{ form_errors(form) }}
+        </div>
+    </div><hr>
+    <div class="container">
+        Result:
+        {{ result }}
+    </div>
+
+    </div>
+{% endblock %}
